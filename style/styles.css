@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
+
+:root {
+  --base-100: #fff;
+  --base-200: #eff1eb;
+  /*--base-300: #5b553b;*/
+  --base-300: #1B3D81;
+  --base-400: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a,
+p {
+  color: var(--base-300);
+  text-decoration: none;
+  font-family: "Geist Mono";
+  font-size: 0, 8rem;
+  font-weight: 500;
+  letter-spacing: -0.0125rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  will-change: transform;
+  z-index: 1;
+}
+
+.nav-logo,
+.nav-cta {
+  flex: 1;
+  display: flex;
+}
+
+.nav-cta {
+  justify-content: flex-end;
+}
+
+.nav-links {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+nav a {
+  height: max-content;
+  color: var(--base-300);
+  background-color: var(--base-200);
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-logo a {
+  color: var(--base-100);
+  background-color: var(--base-300);
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.product-name,
+.product-link {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 2.5rem;
+}
+
+.product-name {
+  background-color: var(--base-100);
+}
+
+.product-link {
+  background-color: var(--base-300);
+}
+
+.product-link a {
+  color: var(--base-100);
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--base-400);
+  color: var(--base-100);
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.preloader-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.preloader-texts {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 3;
+  flex: 1 1 auto;
+}
+
+.preloader-revealer {
+  max-width: 360px;
+}
+
+.preloader-copy {
+  max-width: 360px;
+}
+
+.preloader-revealer p,
+.preloader-copy p {
+  margin: 0;
+  color: var(--base-100);
+  font-family: "Geist Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.preloader-box {
+  width: 150px;
+  height: 150px;
+  background-color: var(--base-300);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.preloader-counter {
+  position: relative;
+  color: var(--base-100);
+  z-index: 5;
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.preloader-counter p {
+  margin: 0;
+  color: var(--base-100);
+  font-family: "Geist Mono", monospace;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.line {
+  will-change: transform;
+  transform: translateY(100%);
+}
+
+@media (max-width: 1000px) {
+  nav .nav-links {
+    display: none;
+  }
+
+  .preloader-inner {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+  .preloader-texts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .preloader-box {
+    width: 120px;
+    height: 120px;
+  }
+}
